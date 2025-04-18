@@ -52,7 +52,7 @@
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="userdashboard">Home</a></li>
-                    <li class="breadcrumb-item active"></li>
+                    <li class="breadcrumb-item active">My Expenses</li>
                 </ol>
             </nav>
         </div>
@@ -70,7 +70,8 @@
                                         <table class="table table-hover align-middle">
                                             <thead>
                                                 <tr>
-                                                    
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Title</th>
                                                     <th scope="col">Category</th>
                                                     <th scope="col">Amount</th>
                                                     <th scope="col">Date</th>
@@ -82,7 +83,7 @@
                                                 <c:forEach items="${expenseList}" var="expense">
                                                     <tr>
                                                         <th scope="row">${count}</th>
-                                                        
+                                                        <td>${expense.title}</td>
                                                         <td>
                                                             <c:forEach items="${categoryList}" var="category">
                                                                 <c:if test="${category.categoryId == expense.categoryId}">
